@@ -1,13 +1,21 @@
-require "jondo/version"
+require "jondo/api_client/client"
+require "jondo/api_client/version"
 
 module Jondo
-  class << self
-    # Alias for Jondo::Client.new
+
+  ##
+  # This class manages APIs communication.
+  class APIClient
+    ##
+    # Creates a new Jondo API client.
     #
-    # @return [Jondo::Client]
-    def client
+    # @param [Hash] options The configuration parameters for the client.
+    # @option options [Boolean] :auto_refresh_token (true)
+    #   Some desc of option
+    def initialize(options={})
+      logger.debug { "#{self.class} - Initializing client with options #{options}" }
       @client = Jondo::Client.new(options) unless defined?(@client) && @client.hash == options.hash
-      @client.name = "dinjas was here!"
+      logger.debug("MADE NEW CLIENT!!")
       @client
     end
 
@@ -16,7 +24,7 @@ module Jondo
 
   private
 
-    def method_missing(method_name, *args, &block)
+    def self.method_missing(method_name, *args, &block)
       return super unless client.respond_to?(method_name)
       client.send(method_name, *args, &block)
     end
