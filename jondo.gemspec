@@ -1,9 +1,18 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jondo/api_client/version'
+require File.expand_path('../lib/jondo/version', __FILE__)
 
 Gem::Specification.new do |gem|
+  # gem.add_runtime_dependency('faraday', '~> 0.7')
+  # gem.add_runtime_dependency('faraday_middleware', '~> 0.8')
+  # gem.add_runtime_dependency('hashie',  '>= 0.4.0')
+  gem.post_install_message =<<eos
+********************************************************************************
+
+  Follow @xhatch on Twitter for announcements, updates, and news.
+  https://twitter.com/xhatch
+
+********************************************************************************
+eos
   gem.name          = "jondo"
   gem.version       = "0.0.1"
   gem.authors       = ["Jason Dinsmore"]
@@ -15,6 +24,6 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  gem.platform = Gem::Platform::RUBY
+  gem.version = Jondo::VERSION.dup
 end
-
-# gem.version       = Jondo::APIClient::VERSION
