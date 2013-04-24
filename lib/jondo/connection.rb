@@ -21,6 +21,7 @@ module Jondo
         unless raw
           case format.to_s.downcase
           when 'json' then connection.use Faraday::Response::ParseJson
+          when 'xml'  then connection.use Faraday::Response::ParseXml
           end
         end
         # connection.use FaradayMiddleware::RaiseHttpException

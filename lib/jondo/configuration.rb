@@ -1,5 +1,6 @@
 require 'faraday'
 require 'faraday_middleware'
+require 'multi_xml'
 
 require File.expand_path('../version', __FILE__)
 
