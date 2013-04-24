@@ -5,7 +5,8 @@ require 'jondo/api_client/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "jondo"
-  gem.version       = "0.0.1"#Jondo::APIClient::VERSION
+  # gem.version       = Jondo::APIClient::VERSION
+  gem.version       = "0.0.1"
   gem.authors       = ["Jason Dinsmore"]
   gem.email         = ["jason@xhatch.com"]
   gem.description   = %q{A simple client for the JONDO fulfillment API}

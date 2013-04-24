@@ -1,4 +1,3 @@
-require "jondo/api_client/client"
 require "jondo/api_client/version"
 
 module Jondo
