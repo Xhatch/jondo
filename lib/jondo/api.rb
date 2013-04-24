@@ -1,6 +1,5 @@
 require File.expand_path('../connection', __FILE__)
 require File.expand_path('../request', __FILE__)
-require File.expand_path('../oauth', __FILE__)
 
 module Jondo
   # @private
@@ -18,6 +17,5 @@ module Jondo
 
     include Connection
     include Request
-    include OAuth
   end
 end

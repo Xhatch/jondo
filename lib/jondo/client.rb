@@ -8,6 +8,7 @@ module Jondo
 
     include Jondo::Client::Utils
 
-    include Jondo::Client::Users
+    include Jondo::Client::Orders
+    include Jondo::Client::Quotes
   end
 end

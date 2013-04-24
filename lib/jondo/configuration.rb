@@ -9,33 +9,23 @@ module Jondo
       :adapter,
       :endpoint,
       :format,
-      :user_agent,
-      :proxy
+      :user_agent
     ].freeze
 
     # An array of valid request/response formats
-    #
-    # @note Not all methods support the XML format.
-    VALID_FORMATS = [
-      :json].freeze
+    VALID_FORMATS = [:xml].freeze
 
     # The adapter that will be used to connect if none is set
     #
     # @note The default faraday adapter is Net::HTTP.
     DEFAULT_ADAPTER = Faraday.default_adapter
 
-    # The endpoint that will be used to connect if none is set
-    #
-    # @note There is no reason to use any other endpoint at this time
-    DEFAULT_ENDPOINT = 'https://api.jondo.com/v1/'.freeze
+    # Endpoints
+    DEFAULT_ENDPOINT_DEV = 'http://staging.harvestDigitalPrinting.com/integration/api/'.freeze
+    DEFAULT_ENDPOINT = 'https://harvestDigitalPrinting.com/integration/api/'.freeze
 
     # The response format appended to the path and sent in the 'Accept' header if none is set
-    #
-    # @note JSON is the only available format at this time
-    DEFAULT_FORMAT = :json
-
-    # By default, don't use a proxy server
-    DEFAULT_PROXY = nil
+    DEFAULT_FORMAT = :xml
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Jondo Ruby Gem #{Jondo::VERSION}".freeze
@@ -66,7 +56,6 @@ module Jondo
       self.endpoint       = DEFAULT_ENDPOINT
       self.format         = DEFAULT_FORMAT
       self.user_agent     = DEFAULT_USER_AGENT
-      self.proxy          = DEFAULT_PROXY
     end
   end
 end
