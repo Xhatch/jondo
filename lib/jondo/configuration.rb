@@ -1,4 +1,6 @@
 require 'faraday'
+require 'faraday_middleware'
+
 require File.expand_path('../version', __FILE__)
 
 module Jondo
@@ -9,6 +11,7 @@ module Jondo
       :adapter,
       :endpoint,
       :format,
+      :proxy,
       :user_agent
     ].freeze
 
@@ -29,6 +32,9 @@ module Jondo
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Jondo Ruby Gem #{Jondo::VERSION}".freeze
+
+    # By default, don't use a proxy server
+    DEFAULT_PROXY = nil
 
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
@@ -56,6 +62,7 @@ module Jondo
       self.endpoint       = DEFAULT_ENDPOINT
       self.format         = DEFAULT_FORMAT
       self.user_agent     = DEFAULT_USER_AGENT
+      self.proxy          = DEFAULT_PROXY
     end
   end
 end

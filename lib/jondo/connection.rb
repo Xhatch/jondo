@@ -23,7 +23,7 @@ module Jondo
           when 'json' then connection.use Faraday::Response::ParseJson
           end
         end
-        connection.use FaradayMiddleware::RaiseHttpException
+        # connection.use FaradayMiddleware::RaiseHttpException
       end
     end
   end
