@@ -7,6 +7,9 @@ require File.expand_path('../version', __FILE__)
 module Jondo
   # Defines constants and methods related to configuration
   module Configuration
+    
+    MultiXml.parser = :nokogiri
+
     # An array of valid keys in the options hash when configuring a {Jondo::API}
     VALID_OPTIONS_KEYS = [
       :adapter,

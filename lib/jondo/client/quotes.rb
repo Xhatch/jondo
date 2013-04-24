@@ -4,7 +4,7 @@ module Jondo
     module Quotes
 
       def quote(*args)
-        response = post("quoteApi.php")
+        response = post("quoteApi.php", )
         response["data"]
       end
 
