@@ -5,7 +5,6 @@ require 'jondo/api_client/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "jondo"
-  # gem.version       = Jondo::APIClient::VERSION
   gem.version       = "0.0.1"
   gem.authors       = ["Jason Dinsmore"]
   gem.email         = ["jason@xhatch.com"]
@@ -17,3 +16,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 end
+
+# gem.version       = Jondo::APIClient::VERSION
