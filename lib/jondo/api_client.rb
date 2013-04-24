@@ -13,7 +13,7 @@ module Jondo
     #   Some desc of option
     def initialize(options={})
       logger.debug { "#{self.class} - Initializing client with options #{options}" }
-      @client = Jondo::Client.new(options) unless defined?(@client) && @client.hash == options.hash
+      @client = Jondo::APIClient.new(options) unless defined?(@client) && @client.hash == options.hash
       logger.debug("MADE NEW CLIENT!!")
       @client
     end
