@@ -28,11 +28,11 @@ module Jondo
     DEFAULT_ADAPTER = Faraday.default_adapter
 
     # Endpoints
-    DEFAULT_ENDPOINT_DEV = 'http://staging.harvestDigitalPrinting.com/integration/api/'.freeze
-    DEFAULT_ENDPOINT = 'https://harvestDigitalPrinting.com/integration/api/'.freeze
+    DEFAULT_ENDPOINT_DEV = 'http://staging.harvestDigitalPrinting.com/integration/'.freeze
+    DEFAULT_ENDPOINT = 'https://harvestDigitalPrinting.com/integration/'.freeze
 
     # The response format appended to the path and sent in the 'Accept' header if none is set
-    DEFAULT_FORMAT = :xml
+    DEFAULT_FORMAT = ""#:xml
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Jondo Ruby Gem #{Jondo::VERSION}".freeze
@@ -63,7 +63,7 @@ module Jondo
     # Reset all configuration options to defaults
     def reset
       self.adapter        = DEFAULT_ADAPTER
-      self.endpoint       = DEFAULT_ENDPOINT
+      self.endpoint       = DEFAULT_ENDPOINT_DEV
       self.format         = DEFAULT_FORMAT
       self.user_agent     = DEFAULT_USER_AGENT
       self.proxy          = DEFAULT_PROXY

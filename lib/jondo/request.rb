@@ -32,7 +32,7 @@ module Jondo
           request.url(path, options)
         when :post, :put
           request.path = path
-          request.body = options unless options.empty?
+          request.body = options unless options.nil? || options.empty?
         end
       end
       raw ? response : response.body

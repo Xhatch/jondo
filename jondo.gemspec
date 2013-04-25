@@ -2,9 +2,10 @@
 require File.expand_path('../lib/jondo/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  # gem.add_runtime_dependency('faraday', '~> 0.7')
-  # gem.add_runtime_dependency('faraday_middleware', '~> 0.8')
-  # gem.add_runtime_dependency('hashie',  '>= 0.4.0')
+  gem.add_runtime_dependency('faraday', '~> 0.7')
+  gem.add_runtime_dependency('faraday_middleware', '~> 0.8')
+  gem.add_runtime_dependency('hashie',  '>= 0.4.0')
+  gem.add_runtime_dependency('multi_xml', '~> 0.5.3')
   gem.post_install_message =<<eos
 ********************************************************************************
 
