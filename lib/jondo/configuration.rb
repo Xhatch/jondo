@@ -31,8 +31,8 @@ module Jondo
     DEFAULT_ENDPOINT_DEV = 'http://staging.harvestDigitalPrinting.com/integration/'.freeze
     DEFAULT_ENDPOINT = 'https://harvestDigitalPrinting.com/integration/'.freeze
 
-    # The response format appended to the path and sent in the 'Accept' header if none is set
-    DEFAULT_FORMAT = ""#:xml
+    # The response format appended to the path and sent in the 'Accept' and 'Content-Type' headers if none is set
+    DEFAULT_FORMAT = :xml
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Jondo Ruby Gem #{Jondo::VERSION}".freeze
