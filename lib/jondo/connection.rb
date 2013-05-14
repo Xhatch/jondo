@@ -24,7 +24,7 @@ module Jondo
           when 'xml'  then connection.use Faraday::Response::ParseXml
           end
         end
-        connection.use FaradayMiddleware::RaiseHttpException
+        connection.use FaradayMiddleware::JondoRaiseHttpException
       end
     end
   end
