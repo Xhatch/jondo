@@ -8,7 +8,7 @@ module Jondo
 
     def connection(raw=false)
       options = {
-        :headers => {'Accept' => "application/#{format}; charset=utf-8", 'User-Agent' => user_agent, 'Content-Type' => "application/#{format}"},
+        :headers => {'Accept' => "application/#{format}; charset=utf-8", 'User-Agent' => user_agent},
         :proxy => proxy,
         :ssl => {:verify => false},
         :url => endpoint,

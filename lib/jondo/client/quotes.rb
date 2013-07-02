@@ -7,10 +7,10 @@ module Jondo
         response = post "api/quoteApi.php", args[0], true, true
         parsed = MultiXml.parse(response.body)
 
-        # parsed = MultiXml.parse(response.body)
-        # root = parsed["root"]
-        # reply = root["quoteReply"] unless root.nil?
-        # reply
+        parsed = MultiXml.parse(response.body)
+        root = parsed["root"]
+        reply = root["quoteReply"] unless root.nil?
+        reply
       end
 
     end
