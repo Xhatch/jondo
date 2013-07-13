@@ -3,8 +3,8 @@ module Jondo
     # Defines methods related to placing an order
     module Orders
 
-      def order(*args)
-        response = post "cofApi.php", args[0], true, true
+      def order(xml)
+        response = post "cofApi.php", xml, true, true
         parsed = MultiXml.parse(response.body)
 
         parsed = MultiXml.parse(response.body)
