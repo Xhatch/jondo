@@ -63,7 +63,7 @@ module Jondo
     # Reset all configuration options to defaults
     def reset
       self.adapter        = DEFAULT_ADAPTER
-      self.endpoint       = DEFAULT_ENDPOINT_DEV
+      self.endpoint       = DEFAULT_ENDPOINT
       self.format         = DEFAULT_FORMAT
       self.user_agent     = DEFAULT_USER_AGENT
       self.proxy          = DEFAULT_PROXY
