@@ -6,8 +6,6 @@ module Jondo
       def order(xml)
         response = post "cofApi.php", xml, true, true
         parsed = MultiXml.parse(response.body)
-
-        parsed = MultiXml.parse(response.body)
         root = parsed["root"]
         reply = root["orderReply"] unless root.nil?
         reply
