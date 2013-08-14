@@ -15,7 +15,6 @@ Gem::Specification.new do |gem|
 ********************************************************************************
 eos
   gem.name          = "jondo"
-  gem.version       = "0.0.1"
   gem.authors       = ["Jason Dinsmore"]
   gem.email         = ["jason@xhatch.com"]
   gem.description   = %q{A simple client for the JONDO fulfillment API}
